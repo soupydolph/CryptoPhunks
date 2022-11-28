@@ -1,8 +1,27 @@
+#root {
+  background-image:
+    linear-gradient(to bottom, rgb(0 0 0 / 78%), rgb(0 0 0 / 94%)),
+    url(/src/assets/phunks-all.png)
+}
+
 .logo {
   max-height: 20em;
   padding: 1.5em;
 }
 
+.title {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+
+  & span {
+    font-family: 'phunkphont';
+    color: rgba(255, 4, 180);
+  }
+}
+
+/* Layout */
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -10,58 +29,108 @@
   padding: 3rem;
   max-width: 1280px;
   margin: 0 auto;
+
+  & p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
-.topBar {
+/* Row 1 */
+.row__top-bar {
   grid-column: 1 / 13;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 6rem;
+}
+
+/* Row 2 */
+.row__intro__text-container {
+  grid-column: 1 / 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 9rem;
+
+  & p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.row__intro__phunk-container {
+  grid-column: 7 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 9rem;
+}
+
+.row__video__text {
+  grid-column: 7 / -1;
+  padding: 0 3rem;
+}
+
+.row__video__player {
+  grid-column: 1 / 7;
+
+  & video {
+    max-width: 100%;
+  }
 }
 
 .phunkTitle {
   font-family: phunkphont;
   font-size: 2rem;
-}
-
-.menu {
-  display: flex;
-  justify-content: end;
-}
-
-.menu p {
-  margin: 0 1rem;
-}
-
-.intro-text-container {
-  grid-column: 1 / 7;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.intro-text-container h3 {
-  font-size: 2rem;
   line-height: 2rem;
-  margin-bottom: 2rem;
 }
 
-.intro-text-container h3 span {
-  font-family: 'phunkphont';
-  color: #9b59b6;
+.phunk-gradient {
+  background-image: linear-gradient(45deg, rgba(255, 4, 180), #d297a8);
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
-.intro-phunk-container {
-  grid-column: 7 / -1;
-  display: flex;
-  align-items: center;
-  justify-content: end;
+svg {
+  fill: #979797;
+  height: 25px;
+  width: 25px;
+}
+
+svg:hover {
+  fill: rgba(255, 4, 180);
 }
 
 @media (max-width: 600px) {
 
-  .intro-text-container,
-  .intro-phunk-container {
+  .row__intro__text-container,
+  .row__intro__phunk-container  {
     grid-column: 1 / -1;
+  }
+}
+
+.phunkySocial a {
+  margin-right: 3rem;
+}
+
+.phunkySocial img {
+  height: 25px;
+}
+
+@media (max-width: 630px) {
+  .menu {
+    display: none;
+  }
+
+  .row__intro__phunk-container  {
+    justify-content: center;
   }
 }

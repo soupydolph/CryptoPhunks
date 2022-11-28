@@ -1,37 +1,109 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import phunk from './assets/phunk0939.svg'
 import 'normalize.css';
 import './App.css'
 
+import Menu from './components/Menu/Menu';
+import Link from './components/Link/Link';
+
+import Twitter from './components/Twitter';
+import Discord from './components/Discord';
+import Medium from './components/Medium';
+
+import Video from './assets/phunks-intro-vid.mp4'
+
+const adjectives = [
+  'innovators',
+  'artists',
+  'developers',
+  'builders',
+  'philosophers',
+  'visionaries',
+  'decentralized',
+  'phree',
+  'phunky'
+]
+
 function App() {
   const [count, setCount] = useState(0)
+  const [adjIndex, setAdjIndex] = useState(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAdjIndex(prev => {
+        const next = (prev + 1)
+
+        if (next === adjectives.length) {
+          return 0;
+        } else {
+          return (prev + 1)
+        }
+      })
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="App">
 
+      {/* TODO: header component */}
       <div className="wrapper">
-        <div className="topBar">
-          <h1 className="phunkTitle">CRYPTOPHUNKS</h1>
-          <menu className="menu">
-            <p>About</p>
-            <p>Projects</p>
-            <p>History</p>
-          </menu>
+        <div className="row__top-bar">
+          <h1 className="phunkTitle phunk-gradient">CRYPTOPHUNKS</h1>
+          <Menu />
         </div>
 
-
-
-        <div className='intro-text-container'>
-          <h3>We are <span>innovators</span></h3>
+        <div className='row__intro__text-container'>
+          <h3 className="title">We are <span className="phunk-gradient">{adjectives[adjIndex]}</span></h3>
           <p>
-            Phunks are free-use, public domain Art, run entirely by decentralized community of artist and builders. There are no Devs, no Leaders, no Roadmaps, just Phunk Pham building cool stuff cause they care about Web3 and decentralization. ✊
+            Phunks are free-use, public domain Art, run entirely by decentralized community of artist and builders.
           </p>
+          <p>
+            There are no Devs, no Leaders, no Roadmaps, just Phunk Pham building cool stuff cause they care about Web3 and decentralization. ✊
+          </p>
+          <p>
+            You can learn more about Phunks at the <Link url="https://phunks.gitbook.io/" title="Knowledge Base" />
+          </p>
+          <p>
+            You can buy a Phunk at <Link url="https://notlarvalabs.com/" title="Not Larva Labs" /> or the <Link url="https://phunks.auction/" title="Auction House" /> for 0% fees!
+          </p>
+          <div className="phunkySocial">
+            <a href="https://twitter.com/CryptoPhunksV2" target="_blank" rel="noopener noreferrer">
+              <Twitter />
+            </a>
+            <a href="http://discord.gg/phunks" target="_blank" rel="noopener noreferrer">
+              <Discord />
+            </a>
+            <a href="https://eggphunk.medium.com/" target="_blank" rel="noopener noreferrer">
+              <Medium />
+            </a>
+          </div>
         </div>
-        <div className='intro-phunk-container'>
+        <div className='row__intro__phunk-container'>
           <img src={phunk} className="logo react" alt="React logo" />
         </div>
+
+        <div className="row__video__player">
+          <video controls>
+            <source src={Video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className="row__video__text">
+          <div>
+            <h3 className="title">So, what happened?</h3>
+            <p>
+              CryptoPhunks (Phunks) is a Non-Fungible Token (NFT) collection on the Ethereum blockchain.
+            </p>
+            <p>
+              The project was created in June 2021 by a group of anonymous* developers to poke fun (parody) at the high-brow, pompous group of people that were reflecting the “old-school” rules of art into this new frontier of Web3.
+            </p>
+            <p>
+              What they did is they took all 10'000 CryptoPunks and flipped them the other way, they are the same 1:1 just facing Left.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </div >
   )
 }
 
