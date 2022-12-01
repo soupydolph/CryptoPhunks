@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 6rem;
+  margin-bottom: 12rem;
 }
 
 .reverse {
@@ -32,7 +32,7 @@
 
 @media (max-width: 650px) {
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .side-by-side__text {

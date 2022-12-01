@@ -117,7 +117,7 @@ svg:hover {
   fill: rgba(255, 4, 180);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
   .row__intro__text-container,
   .row__intro__phunk-container,
