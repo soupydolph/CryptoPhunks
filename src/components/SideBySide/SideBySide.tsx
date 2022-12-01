@@ -8,7 +8,6 @@ const SideBySide = (props: { title: string, link: string, text: string, image: s
         <h3 className="title">{props.title}</h3>
         <p>{props.text}</p>
         <button>Visit</button>
-        <button>Learn more</button>
       </div>
       <div className={`${styles.element} ${styles['side-by-side__image']}`}>
         <img src={props.image} alt="" />
