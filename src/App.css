@@ -1,19 +1,26 @@
 #root {
   background-image:
-    linear-gradient(to bottom, rgb(0 0 0 / 78%), rgb(0 0 0 / 94%)),
-    url(/src/assets/phunks-all.png)
+  linear-gradient(to bottom, rgb(0 0 0 / 87%), rgb(0 0 0 / 100%)),
+  url(/src/assets/phunks-all.png);
 }
 
-.logo {
-  max-height: 20em;
-  padding: 1.5em;
+.App {
+  max-width: 1280px;
+  padding: 3rem;
+  margin: 0 auto;
+
+  & p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
 }
 
 .title {
   font-size: 2rem;
   line-height: 2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
 
   & span {
     font-family: 'phunkphont';
@@ -26,14 +33,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 10px;
-  padding: 3rem;
-  max-width: 1280px;
-  margin: 0 auto;
-
-  & p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
+  margin: 1rem;
 }
 
 /* Row 1 */
@@ -63,10 +63,17 @@
   grid-column: 7 / -1;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   margin-bottom: 9rem;
+
+  & .phunk {
+    max-height: 350px;
+    padding: 1.5em;
+    margin-top: -50px;
+  }
 }
 
+/* Row 3: Video explainer */
 .row__video__text {
   grid-column: 7 / -1;
   padding: 0 3rem;
@@ -99,6 +106,7 @@
   -moz-text-fill-color: transparent;
 }
 
+/* TODO: move to a class */
 svg {
   fill: #979797;
   height: 25px;
@@ -112,7 +120,10 @@ svg:hover {
 @media (max-width: 600px) {
 
   .row__intro__text-container,
-  .row__intro__phunk-container  {
+  .row__intro__phunk-container,
+  .row__video__player,
+  .row__video__text
+    {
     grid-column: 1 / -1;
   }
 }
@@ -132,5 +143,15 @@ svg:hover {
 
   .row__intro__phunk-container  {
     justify-content: center;
+  }
+}
+
+@media (max-width: 830px) {
+  .row__video__player,
+  .row__video__text,
+  .row__side-to-side--left,
+  .row__side-to-side--right
+    {
+    grid-column: 1 / -1;
   }
 }

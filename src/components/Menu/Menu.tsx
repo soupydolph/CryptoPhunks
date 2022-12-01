@@ -3,8 +3,10 @@ import './Menu.css'
 const Menu = () => {
   return (
     <menu className="menu">
+      <p>Phome</p>
+      <p>Buy</p>
       <p>Projects</p>
-      <p>About</p>
+      <p>Museum</p>
     </menu>
   )
 }
