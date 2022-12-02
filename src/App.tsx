@@ -111,7 +111,7 @@ function App() {
 
       <SideBySide
         title="NotLarvaLabs"
-        link=""
+        link="https://notlarvalabs.com/"
         image={NllLogo}
         text="
           NotLarvaLabs (NLL) is a community built royalty-free Marketplace for buying and selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
@@ -122,7 +122,7 @@ function App() {
 
       <SideBySide
         title="CryptoPhunks Auction House"
-        link=""
+        link="https://phunks.auction/"
         image={AuctionHouseLogo}
         text="
           NotLarvaLabs (NLL) is a community built royalty-free Marketplace for buying and selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
@@ -134,7 +134,7 @@ function App() {
 
       <SideBySide
         title="FlyWheel"
-        link=""
+        link="https://www.phunks.pro/"
         image={FlyWheelLogo}
         text="
         The FlyWheel is a DAPP that appraises mid- and top-tier CryptoPhunks and gives holders the option to sell them to the Treasury at a small discount to fair market value in a trustless, fair, and automatic way.
