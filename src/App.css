@@ -1,41 +1,157 @@
 #root {
+  background-image:
+  linear-gradient(to bottom, rgb(0 0 0 / 87%), rgb(0 0 0 / 100%)),
+  url(/src/assets/phunks-all.png);
+}
+
+.App {
   max-width: 1280px;
+  padding: 3rem;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  & p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.title {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+
+  & span {
+    font-family: 'phunkphont';
+    color: rgba(255, 4, 180);
   }
 }
 
-.card {
-  padding: 2em;
+/* Layout */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  margin: 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+/* Row 1 */
+.row__top-bar {
+  grid-column: 1 / 13;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+}
+
+/* Row 2 */
+.row__intro__text-container {
+  grid-column: 1 / 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 9rem;
+
+  & p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.row__intro__phunk-container {
+  grid-column: 7 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 9rem;
+
+  & .phunk {
+    max-height: 350px;
+    padding: 1.5em;
+    margin-top: -50px;
+  }
+}
+
+/* Row 3: Video explainer */
+.row__video__text {
+  grid-column: 7 / -1;
+  padding: 0 3rem;
+}
+
+.row__video__player {
+  grid-column: 1 / 7;
+
+  & video {
+    max-width: 100%;
+  }
+}
+
+.phunkTitle {
+  font-family: phunkphont;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.phunk-gradient {
+  background-image: linear-gradient(45deg, rgba(255, 4, 180), #d297a8);
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+/* TODO: move to a class */
+svg {
+  fill: #979797;
+  height: 25px;
+  width: 25px;
+}
+
+svg:hover {
+  fill: rgba(255, 4, 180);
+}
+
+@media (max-width: 650px) {
+
+  .row__intro__text-container,
+  .row__intro__phunk-container,
+  .row__video__player,
+  .row__video__text
+    {
+    grid-column: 1 / -1;
+  }
+}
+
+.phunkySocial a {
+  margin-right: 3rem;
+}
+
+.phunkySocial img {
+  height: 25px;
+}
+
+@media (max-width: 630px) {
+  .menu {
+    display: none;
+  }
+
+  .row__intro__phunk-container  {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 830px) {
+  .row__video__player,
+  .row__video__text,
+  .row__side-to-side--left,
+  .row__side-to-side--right
+    {
+    grid-column: 1 / -1;
+  }
 }

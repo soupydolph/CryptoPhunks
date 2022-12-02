@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12rem;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.side-by-side__text {
+  & p { max-width: 35rem; }
+  width: 50%;
+}
+
+.side-by-side__image {
+  margin-left: 3rem;
+  width: 50%;
+  align-items: center;
+
+  & img {
+    max-width: 20rem;
+  }
+}
+
+.auction_img {
+  & img {
+    height: 6rem;
+  }
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  background-color: #ffffff40;
+  color: rgba(255, 4, 180);
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  font-family: 'phunkphont';
+  border: 1px solid rgba(255, 4, 180);
+}
+
+.button:hover {
+  background-color: rgba(255, 4, 180);
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .side-by-side__text {
+    & p { max-width: auto }
+    width: 100%;
+  }
+
+  .side-by-side__image {
+    width: 100%;
+    margin: 0;
+  }
+}
