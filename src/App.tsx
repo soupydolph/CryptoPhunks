@@ -13,6 +13,8 @@ import Medium from './components/Medium';
 
 import Video from './assets/phunks-intro-vid.mp4'
 import NllLogo from './assets/nll-logo.svg'
+import AuctionHouseLogo from './assets/auction-logo.svg'
+import FlyWheelLogo from './assets/flywheel-logo.png'
 
 const adjectives = [
   'innovators',
@@ -119,29 +121,26 @@ function App() {
       />
 
       <SideBySide
-        title="NotLarvaLabs"
+        title="CryptoPhunks Auction House"
         link=""
-        image={NllLogo}
+        image={AuctionHouseLogo}
         text="
           NotLarvaLabs (NLL) is a community built royalty-free Marketplace for buying and selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
           Idea came to life after two Big Corporations (LarvaLabs and OpenSea) decided to censor CryptoPhunks.
         "
         reverse={true}
+        customClass="auction_img"
       />
 
-      {/* Row 4: Project - */}
-      {/* <div className='row__side-to-side--left'>
-        <h3 className="title">NotLarvaLabs</h3>
-        <p>
-          NotLarvaLabs (NLL) is a community built royalty-free Marketplace for buying and selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
-          Idea came to life after two Big Corporations (LarvaLabs and OpenSea) decided to censor CryptoPhunks. Coined and designed by Pauly & Ryder Ripps somewhere in LA and developed by Chopper and Kenobi somewhere in NA, NLL quickly gained a lot of attention in NFT world and flipped the script.
-          NLL developers decided to open-source the code and renounce the ownership, this means that Phunks Marketplace (backend) operates autonomously on Ethereum blockchain forever.
-        </p>
-        <button>Visit</button>
-      </div> */}
-      {/* <div className='row__side-to-side--right'>
-        <img src={NllImage} alt="" />
-      </div> */}
+      <SideBySide
+        title="FlyWheel"
+        link=""
+        image={FlyWheelLogo}
+        text="
+        The FlyWheel is a DAPP that appraises mid- and top-tier CryptoPhunks and gives holders the option to sell them to the Treasury at a small discount to fair market value in a trustless, fair, and automatic way.
+        "
+        reverse={false}
+      />
     </div>
   )
 }
