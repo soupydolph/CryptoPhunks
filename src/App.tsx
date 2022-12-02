@@ -15,6 +15,7 @@ import Video from './assets/phunks-intro-vid.mp4'
 import NllLogo from './assets/nll-logo.svg'
 import AuctionHouseLogo from './assets/auction-logo.svg'
 import FlyWheelLogo from './assets/flywheel-logo.png'
+import Button from './components/Button/Button';
 
 const adjectives = [
   'innovators',
@@ -29,7 +30,6 @@ const adjectives = [
 
 function App() {
   const [adjIndex, setAdjIndex] = useState(0)
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -70,6 +70,7 @@ function App() {
           <p>
             You can buy a Phunk at <Link url="https://notlarvalabs.com/" title="Not Larva Labs" /> or the <Link url="https://phunks.auction/" title="Auction House" /> for 0% fees!
           </p>
+          <Button link="https://notlarvalabs.com/" text="Cop a Phunk" />
           <div className="phunkySocial">
             <a href="https://twitter.com/CryptoPhunksV2" target="_blank" rel="noopener noreferrer">
               <Twitter />
@@ -140,6 +141,14 @@ function App() {
         The FlyWheel is a DAPP that appraises mid- and top-tier CryptoPhunks and gives holders the option to sell them to the Treasury at a small discount to fair market value in a trustless, fair, and automatic way.
         "
         reverse={false}
+      />
+
+      <SideBySide
+        title="Phunks Knowledge Base"
+        link="https://www.phunks.pro/"
+        image={FlyWheelLogo}
+        text="The museum of Phunks"
+        reverse={true}
       />
     </div>
   )

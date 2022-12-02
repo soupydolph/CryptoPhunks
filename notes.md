@@ -1,19 +1,15 @@
+## Planned menu options
 Home
 Buy
 Projects
 Museum
 
-Projects:
-- NLL
-- Auction house
-- Flywheel
+# Projects to feature initially:
 - Knowledge base
 - Open source projects link out
 
-TODO:
-
-Phunk on the right is randomly selected
-
-Big section of projects that includes everything, maybe organized by category, with a hero element for each with a description about what each project is about
-
-Show Providence 
+## NOTES AND IDEAS:
+ [ ] Make the into phunk a random one from the collection
+ [ ] Show Providence of phunks
+ [ ] Connect wallet and display your phunk on the site
+ [ ] Have phunk-only content 
