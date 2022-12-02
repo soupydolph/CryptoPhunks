@@ -46,6 +46,7 @@
   border-radius: 5px;
   font-family: 'phunkphont';
   border: 1px solid rgba(255, 4, 180);
+  transition: 0.3s;
 }
 
 .button:hover {

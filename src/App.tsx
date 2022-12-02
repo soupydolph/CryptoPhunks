@@ -86,70 +86,73 @@ function App() {
         <div className='row__intro__phunk-container'>
           <img src={phunk} className="phunk" alt="Phunky" />
         </div>
-
-        {/* Row 3: Video explainer */}
-        {/* <div className="row__video__player">
-          <video controls>
-            <source src={Video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div className="row__video__text">
-          <div>
-            <h3 className="title">So, what happened?</h3>
-            <p>
-              CryptoPhunks (Phunks) is a Non-Fungible Token (NFT) collection on the Ethereum blockchain.
-            </p>
-            <p>
-              The project was created in June 2021 by a group of anonymous* developers to poke fun (parody) at the high-brow, pompous group of people that were reflecting the “old-school” rules of art into this new frontier of Web3.
-            </p>
-            <p>
-              What they did is they took all 10'000 CryptoPunks and flipped them the other way, they are the same 1:1 just facing Left.
-            </p>
-          </div>
-        </div> */}
       </div>
+
+      <SideBySide
+        title="So, what happened?"
+        image={Video}
+        reverse={true}
+        media="video"
+        shouldHideLink={true}
+      >
+        <div>
+          <p>CryptoPhunks (Phunks) is a Non-Fungible Token (NFT) collection on the Ethereum blockchain.</p>
+          <p>
+            The project was created in June 2021 by a group of anonymous* developers to poke fun (parody) at the high-brow, pompous group of people that were reflecting the “old-school” rules of art into this new frontier of Web3.
+          </p>
+          <p>
+            What they did is they took all 10'000 CryptoPunks and flipped them the other way, they are the same 1:1 just facing Left.
+          </p>
+        </div>
+      </SideBySide>
 
       <SideBySide
         title="NotLarvaLabs"
         link="https://notlarvalabs.com/"
         image={NllLogo}
-        text="
+        reverse={false}
+        media="image"
+      >
+        <p>
           NotLarvaLabs (NLL) is a community built royalty-free Marketplace for buying and selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
           Idea came to life after two Big Corporations (LarvaLabs and OpenSea) decided to censor CryptoPhunks.
-        "
-        reverse={false}
-      />
+        </p>
+      </SideBySide>
 
       <SideBySide
         title="CryptoPhunks Auction House"
         link="https://phunks.auction/"
         image={AuctionHouseLogo}
-        text="
-          NotLarvaLabs (NLL) is a community built royalty-free Marketplace for buying and selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
-          Idea came to life after two Big Corporations (LarvaLabs and OpenSea) decided to censor CryptoPhunks.
-        "
         reverse={true}
         customClass="auction_img"
-      />
+        media="image"
+      >
+        <p>
+          CryptoPhunks Auction House was built by Chopper and Kenobi with the purpose of facilitating perpetual auctions for CryptoPhunks held in the Treasury Vault. All Ethereum collected from settled auctions will remain in the treasury under direction of the community.
+        </p>
+      </SideBySide>
 
       <SideBySide
         title="FlyWheel"
         link="https://www.phunks.pro/"
         image={FlyWheelLogo}
-        text="
-        The FlyWheel is a DAPP that appraises mid- and top-tier CryptoPhunks and gives holders the option to sell them to the Treasury at a small discount to fair market value in a trustless, fair, and automatic way.
-        "
         reverse={false}
-      />
+        media="image"
+      >
+        <p>
+          The FlyWheel is a DAPP that appraises mid- and top-tier CryptoPhunks and gives holders the option to sell them to the Treasury at a small discount to fair market value in a trustless, fair, and automatic way.
+        </p>
+      </SideBySide>
 
       <SideBySide
         title="Phunks Knowledge Base"
         link="https://www.phunks.pro/"
         image={FlyWheelLogo}
-        text="The museum of Phunks"
         reverse={true}
-      />
+        media="image"
+      >
+        <p>The museum of Phunks</p>
+      </SideBySide>
     </div>
   )
 }
