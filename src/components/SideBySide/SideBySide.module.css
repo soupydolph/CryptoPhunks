@@ -38,7 +38,7 @@
 
 .knowledge_img {
   & img {
-    max-width: 30rem;
+    max-width:100%;
   }
 }
 
