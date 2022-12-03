@@ -15,6 +15,8 @@ import Video from './assets/phunks-intro-vid.mp4'
 import NllLogo from './assets/nll-logo.svg'
 import AuctionHouseLogo from './assets/auction-logo.svg'
 import FlyWheelLogo from './assets/flywheel-logo.png'
+import KnowledgeBaseLogo from './assets/phunk-knowledge-logo.jpeg'
+
 import Button from './components/Button/Button';
 
 const adjectives = [
@@ -147,11 +149,12 @@ function App() {
       <SideBySide
         title="Phunks Knowledge Base"
         link="https://www.phunks.pro/"
-        image={FlyWheelLogo}
+        image={KnowledgeBaseLogo}
         reverse={true}
         media="image"
+        customClass="knowledge_img"
       >
-        <p>The museum of Phunks</p>
+        <p>The museum of all things Phunky! Take a deep dive into the history of the phunks.</p>
       </SideBySide>
     </div>
   )

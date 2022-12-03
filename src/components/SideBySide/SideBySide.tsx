@@ -18,7 +18,7 @@ const SideBySide = (
         <h3 className="title">{props.title}</h3>
         {props.children}
 
-        {!props.shouldHideLink ? (<a className={styles.button} href={props.link} target="_blank" rel="">Visit</a>) : ''}
+        {!props.shouldHideLink ? (<a className={styles.button} href={props.link} target="_blank" rel="">visit</a>) : ''}
 
 
       </div>
@@ -28,7 +28,7 @@ const SideBySide = (
             <img src={props.image} alt="" />
           )
           : (
-            <video controls>
+            <video className={styles.video} controls>
               <source src={props.image} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
