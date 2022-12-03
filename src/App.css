@@ -1,6 +1,6 @@
 #root {
   background-image:
-  linear-gradient(to bottom, rgb(0 0 0 / 87%), rgb(0 0 0 / 100%)),
+  linear-gradient(to bottom,rgb(13 13 13 / 87%),rgb(10 10 10) 33%),
   url(/src/assets/phunks-all.png);
 }
 
