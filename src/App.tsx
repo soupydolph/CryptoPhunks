@@ -54,7 +54,7 @@ function App() {
         {/* Row 1: Top bar */}
         <div className="row__top-bar">
           <h1 className="phunkTitle phunk-gradient">CRYPTOPHUNKS</h1>
-          <Menu />
+          {/* <Menu /> */}
         </div>
 
         {/* Row 2: Intro */}
@@ -148,7 +148,7 @@ function App() {
 
       <SideBySide
         title="Phunks Knowledge Base"
-        link="https://www.phunks.pro/"
+        link="https://phunks.gitbook.io/"
         image={KnowledgeBaseLogo}
         reverse={true}
         media="image"
