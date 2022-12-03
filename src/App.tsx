@@ -72,7 +72,7 @@ function App() {
           <p>
             You can buy a Phunk at <Link url="https://notlarvalabs.com/" title="Not Larva Labs" /> or the <Link url="https://phunks.auction/" title="Auction House" /> for 0% fees!
           </p>
-          <Button link="https://notlarvalabs.com/" text="Cop a Phunk" />
+          <Button link="https://notlarvalabs.com/" text="buy a phunk" />
           <div className="phunkySocial">
             <a href="https://twitter.com/CryptoPhunksV2" target="_blank" rel="noopener noreferrer">
               <Twitter />
