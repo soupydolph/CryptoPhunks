@@ -54,7 +54,7 @@ function App() {
         {/* Row 1: Top bar */}
         <div className="row__top-bar">
           <h1 className="phunkTitle phunk-gradient">CRYPTOPHUNKS</h1>
-          <Menu />
+          {/* <Menu /> */}
         </div>
 
         {/* Row 2: Intro */}
@@ -72,7 +72,7 @@ function App() {
           <p>
             You can buy a Phunk at <Link url="https://notlarvalabs.com/" title="Not Larva Labs" /> or the <Link url="https://phunks.auction/" title="Auction House" /> for 0% fees!
           </p>
-          <Button link="https://notlarvalabs.com/" text="Cop a Phunk" />
+          <Button link="https://notlarvalabs.com/" text="buy a phunk" />
           <div className="phunkySocial">
             <a href="https://twitter.com/CryptoPhunksV2" target="_blank" rel="noopener noreferrer">
               <Twitter />
@@ -148,7 +148,7 @@ function App() {
 
       <SideBySide
         title="Phunks Knowledge Base"
-        link="https://www.phunks.pro/"
+        link="https://phunks.gitbook.io/"
         image={KnowledgeBaseLogo}
         reverse={true}
         media="image"

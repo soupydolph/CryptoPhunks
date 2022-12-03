@@ -67,7 +67,7 @@
   margin-bottom: 9rem;
 
   & .phunk {
-    max-height: 350px;
+    height: 350px;
     padding: 1.5em;
     margin-top: -50px;
   }
@@ -134,6 +134,10 @@ svg:hover {
 
 .phunkySocial img {
   height: 25px;
+}
+
+.phunkTitle {
+  font-size: 1rem;
 }
 
 @media (max-width: 630px) {
