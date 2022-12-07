@@ -12,7 +12,7 @@ import Medium from './components/Medium';
 
 // import phunk from './assets/phunk0939.svg'
 // import Video from './assets/phunks-intro-vid.mp4'
-// import NllLogo from './assets/nll-logo.svg'
+import NllLogo from './assets/nll-logo.svg'
 import AuctionHouseLogo from './assets/auction-logo.svg'
 import FlyWheelLogo from './assets/flywheel-logo.png'
 import KnowledgeBaseLogo from './assets/phunk-knowledge-logo.jpeg'
@@ -146,7 +146,7 @@ function App() {
 
         <div className="columns side-by-side reverse-cols">
           <div className="column side-by-side-col side-by-side-col--image">
-
+            <img src={NllLogo} alt="" />
           </div>
           <div className="column side-by-side-col">
             <h3 className='has-text-white is-size-2'>Not Larva Labs</h3>
