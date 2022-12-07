@@ -27,3 +27,13 @@
   margin: 0 auto;
   width: 230px;
 }
+
+@media(max-width: 768px) {
+  .button{
+    margin: 0 auto;
+  }
+
+  .wide-button {
+    width: auto;
+  }
+}
