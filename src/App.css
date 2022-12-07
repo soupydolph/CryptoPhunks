@@ -15,7 +15,7 @@
 h2.large-title {
   font-family: inter;
   color: white;
-  font-size: 96px;
+  font-size: 64px;
   text-align: center;
 }
 
@@ -79,6 +79,6 @@ h2.large-title {
   }
 
   h2.large-title {
-    font-size: 48px;
+    font-size: 32px;
   }
 }
