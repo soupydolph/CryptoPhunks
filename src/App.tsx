@@ -101,12 +101,12 @@ function App() {
                 url="https://notlarvalabs.com/"
                 title="Not Larva Labs"
               /> or the <Link
-                url="https://notlarvalabs.com/"
+                url="https://phunks.auction/"
                 title="Auction House"
               /> with 0% fees!
 
               You can learn more about Phunks at the <Link
-                url="https://notlarvalabs.com/"
+                url="https://phunks.gitbook.io/"
                 title="Knowledge Base"
               />.
             </div>
