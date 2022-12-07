@@ -51,6 +51,26 @@ h2.large-title {
   flex-direction: row-reverse;
 }
 
+.social-block {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+.social-link {
+  height: 50px;
+  width: 50px;
+  margin: 1rem;
+  & svg {
+    fill: white;
+  }
+}
+
+.social-link:hover {
+  & svg {
+    fill: #FF04B4;
+  }
+}
+
 @media(max-width: 768px) {
   .phunk-intro {
     & h1 {

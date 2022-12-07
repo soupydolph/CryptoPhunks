@@ -10,9 +10,9 @@ import Twitter from './components/Twitter';
 import Discord from './components/Discord';
 import Medium from './components/Medium';
 
-import phunk from './assets/phunk0939.svg'
-import Video from './assets/phunks-intro-vid.mp4'
-import NllLogo from './assets/nll-logo.svg'
+// import phunk from './assets/phunk0939.svg'
+// import Video from './assets/phunks-intro-vid.mp4'
+// import NllLogo from './assets/nll-logo.svg'
 import AuctionHouseLogo from './assets/auction-logo.svg'
 import FlyWheelLogo from './assets/flywheel-logo.png'
 import KnowledgeBaseLogo from './assets/phunk-knowledge-logo.jpeg'
@@ -97,7 +97,6 @@ function App() {
             </div>
 
             <div className='block has-text-white mb-6 is-size-4'>
-
               You can buy a Phunk at <Link
                 url="https://notlarvalabs.com/"
                 title="Not Larva Labs"
@@ -112,11 +111,32 @@ function App() {
               />.
             </div>
 
-            <Button
-              link="https://notlarvalabs.com/"
-              text="buy a phunk"
-              wide={true}
-            />
+            <div className="block">
+              <Button
+                link="https://notlarvalabs.com/"
+                text="buy a phunk"
+                wide={true}
+              />
+            </div>
+            <div className="block social-block">
+              <div className='level is-mobile'>
+                <div className="level-item">
+                  <a href="https://twitter.com/CryptoPhunksV2" target="_blank" rel="noopener noreferrer" className='social-link'>
+                    <Twitter />
+                  </a>
+                </div>
+                <div className="level-item">
+                  <a href="http://discord.gg/phunks" target="_blank" rel="noopener noreferrer" className='social-link'>
+                    <Discord />
+                  </a>
+                </div>
+                <div className="level-item">
+                  <a href="https://eggphunk.medium.com/" target="_blank" rel="noopener noreferrer" className='social-link'>
+                    <Medium />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -126,7 +146,7 @@ function App() {
 
         <div className="columns side-by-side reverse-cols">
           <div className="column side-by-side-col side-by-side-col--image">
-            <img src={NllLogo} alt="" />
+
           </div>
           <div className="column side-by-side-col">
             <h3 className='has-text-white is-size-2'>Not Larva Labs</h3>
