@@ -47,6 +47,30 @@ h2.large-title {
   max-height: 400px;
 }
 
+.reverse-cols {
+  flex-direction: row-reverse;
+}
+
+.social-block {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+.social-link {
+  height: 50px;
+  width: 50px;
+  margin: 1rem;
+  & svg {
+    fill: white;
+  }
+}
+
+.social-link:hover {
+  & svg {
+    fill: #FF04B4;
+  }
+}
+
 @media(max-width: 768px) {
   .phunk-intro {
     & h1 {
@@ -58,9 +82,3 @@ h2.large-title {
     font-size: 48px;
   }
 }
-
-/* 
-TODO:
- - spacing between elements in projects section
-
-*/
