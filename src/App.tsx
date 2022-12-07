@@ -85,18 +85,18 @@ function App() {
       </section>
 
       <section className="section is-medium no-bottom-padding">
-        <div className="columns is-mobile is-centered">
+        <div className="columns is-centered">
           <div className="column is-half has-text-centered">
-            <p className='has-text-white is-size-4'>
+            <div className='block has-text-white mb-6 is-size-4'>
               Phunks are free-use, public domain Art, run entirely by decentralized community of artist and builders.
-            </p>
-            <br></br>
-            <p className='has-text-white is-size-4'>
+            </div>
+
+            <div className='block has-text-white mb-6 is-size-4'>
               There are no Devs, no Leaders, no Roadmaps, just Phunk Pham building cool stuff cause they care about
               Web3 and decentralization. ✊
-            </p>
-            <br></br>
-            <p className='has-text-white mb-6 is-size-4'>
+            </div>
+
+            <div className='block has-text-white mb-6 is-size-4'>
 
               You can buy a Phunk at <Link
                 url="https://notlarvalabs.com/"
@@ -110,8 +110,8 @@ function App() {
                 url="https://notlarvalabs.com/"
                 title="Knowledge Base"
               />.
-            </p>
-            <br></br>
+            </div>
+
             <Button
               link="https://notlarvalabs.com/"
               text="buy a phunk"
@@ -123,21 +123,24 @@ function App() {
 
       <section className="section is-medium">
         <h2 className="large-title mb-6">Phunky Projects</h2>
-        <div className="columns side-by-side">
+
+        <div className="columns side-by-side reverse-cols">
+          <div className="column side-by-side-col side-by-side-col--image">
+            <img src={NllLogo} alt="" />
+          </div>
           <div className="column side-by-side-col">
             <h3 className='has-text-white is-size-2'>Not Larva Labs</h3>
-            <p className='has-text-white is-size-4'>
+            <div className='block has-text-white is-size-4'>
               NotLarvaLabs (NLL) is a community-built royalty-free Marketplace for buying and
               selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
+            </div>
+            <div className='block has-text-white is-size-4'>
               The idea came to life after two Big Corporations (LarvaLabs and OpenSea) decided to censor CryptoPhunks.
-            </p>
+            </div>
             <Button
               link="https://notlarvalabs.com/"
               text="visit"
             />
-          </div>
-          <div className="column side-by-side-col side-by-side-col--image">
-            <img src={NllLogo} alt="" />
           </div>
         </div>
 
@@ -147,11 +150,14 @@ function App() {
           </div>
           <div className="column side-by-side-col">
             <h3 className='has-text-white is-size-2'>CryptoPhunks Auction House</h3>
-            <p className='has-text-white is-size-4'>
+            <div className='block has-text-white is-size-4'>
               CryptoPhunks Auction House was built by Chopper and Kenobi with the purpose of facilitating perpetual
-              auctions for CryptoPhunks held in the Treasury Vault. All Ethereum collected from settled auctions will
+              auctions for CryptoPhunks held in the Treasury Vault.
+            </div>
+            <div className='block has-text-white is-size-4'>
+              All Ethereum collected from settled auctions will
               remain in the treasury under direction of the community.
-            </p>
+            </div>
             <Button
               link="https://phunks.auction/"
               text="visit"
@@ -159,20 +165,20 @@ function App() {
           </div>
         </div>
 
-        <div className="columns side-by-side">
+        <div className="columns side-by-side reverse-cols">
+          <div className="column side-by-side-col side-by-side-col--image">
+            <img className='flywheel-image' src={FlyWheelLogo} alt="" />
+          </div>
           <div className="column side-by-side-col">
             <h3 className='has-text-white is-size-2'>FlyWheel</h3>
-            <p className='has-text-white is-size-4'>
+            <div className='block has-text-white is-size-4'>
               The FlyWheel is a DAPP that appraises mid- and top-tier CryptoPhunks and gives holders the option
               to sell them to the Treasury at a small discount to fair market value in a trustless, fair, and automatic way.
-            </p>
+            </div>
             <Button
               link="https://www.phunks.pro/"
               text="visit"
             />
-          </div>
-          <div className="column side-by-side-col side-by-side-col--image">
-            <img className='flywheel-image' src={FlyWheelLogo} alt="" />
           </div>
         </div>
 
@@ -182,9 +188,9 @@ function App() {
           </div>
           <div className="column side-by-side-col">
             <h3 className='has-text-white is-size-2'>Phunks Knowledge Base</h3>
-            <p className='has-text-white is-size-4'>
+            <div className='block has-text-white is-size-4'>
               The museum of all things Phunky! Take a deep dive into the history of the phunks.
-            </p>
+            </div>
             <Button
               link="https://phunks.gitbook.io/"
               text="visit"

@@ -47,6 +47,10 @@ h2.large-title {
   max-height: 400px;
 }
 
+.reverse-cols {
+  flex-direction: row-reverse;
+}
+
 @media(max-width: 768px) {
   .phunk-intro {
     & h1 {
