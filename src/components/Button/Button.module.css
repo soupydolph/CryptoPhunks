@@ -1,19 +1,39 @@
 .button {
-  width: 220px;
-  height: 50px;
-  background-color: #ffffff40;
-  color: rgba(255, 4, 180);
-  text-align: center;
-  line-height: 50px;
-  border-radius: 5px;
-  font-family: 'phunkphont';
-  border: 1px solid rgba(255, 4, 180);
-  margin-bottom: 3rem;
-  margin-top: 1.5rem;
-  transition: 0.3s;
+    /* margin: 0 auto; */
+    display: block;
+    width: 161px;
+    height: auto;
+    color: rgba(255, 4, 180);
+    text-align: center;
+    /* line-height: 50px; */
+    border-radius: 5px;
+    font-family: 'phunkphont';
+    border: 1px solid rgba(255, 4, 180);
+    /* margin-bottom: 3rem; */
+    margin-top: 1.5rem;
+    transition: 0.3s;
+    padding: 1rem;
+    font-size: 21px;
+    /* display: block; */
+    /* margin: 0 auto; */
 }
 
 .button:hover {
   background-color: rgba(255, 4, 180);
   color: white;
+}
+
+.wide-button {
+  margin: 0 auto;
+  width: 230px;
+}
+
+@media(max-width: 768px) {
+  .button{
+    margin: 0 auto;
+  }
+
+  .wide-button {
+    width: auto;
+  }
 }
