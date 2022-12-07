@@ -96,15 +96,20 @@ function App() {
               Web3 and decentralization. ✊
             </p>
             <br></br>
-            <p className='has-text-white is-size-4'>
-              You can learn more about Phunks at the Knowledge Base
+            <p className='has-text-white mb-6 is-size-4'>
+
               You can buy a Phunk at <Link
                 url="https://notlarvalabs.com/"
                 title="Not Larva Labs"
               /> or the <Link
                 url="https://notlarvalabs.com/"
                 title="Auction House"
-              /> for 0% fees!
+              /> with 0% fees!
+
+              You can learn more about Phunks at the <Link
+                url="https://notlarvalabs.com/"
+                title="Knowledge Base"
+              />.
             </p>
             <br></br>
             <Button
@@ -122,13 +127,13 @@ function App() {
           <div className="column side-by-side-col">
             <h3 className='has-text-white is-size-2'>Not Larva Labs</h3>
             <p className='has-text-white is-size-4'>
-              NotLarvaLabs (NLL) is a community built royalty-free Marketplace for buying and
+              NotLarvaLabs (NLL) is a community-built royalty-free Marketplace for buying and
               selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
-              Idea came to life after two Big Corporations (LarvaLabs and OpenSea) decided to censor CryptoPhunks.
+              The idea came to life after two Big Corporations (LarvaLabs and OpenSea) decided to censor CryptoPhunks.
             </p>
             <Button
               link="https://notlarvalabs.com/"
-              text="Visit"
+              text="visit"
             />
           </div>
           <div className="column side-by-side-col side-by-side-col--image">
@@ -149,7 +154,7 @@ function App() {
             </p>
             <Button
               link="https://phunks.auction/"
-              text="Visit"
+              text="visit"
             />
           </div>
         </div>
@@ -163,7 +168,7 @@ function App() {
             </p>
             <Button
               link="https://www.phunks.pro/"
-              text="Visit"
+              text="visit"
             />
           </div>
           <div className="column side-by-side-col side-by-side-col--image">
@@ -181,8 +186,8 @@ function App() {
               The museum of all things Phunky! Take a deep dive into the history of the phunks.
             </p>
             <Button
-              link="https://www.phunks.pro/"
-              text="Visit"
+              link="https://phunks.gitbook.io/"
+              text="visit"
             />
           </div>
         </div>
