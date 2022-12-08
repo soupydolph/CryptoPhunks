@@ -14,7 +14,7 @@ import Medium from './components/Medium';
 // import Video from './assets/phunks-intro-vid.mp4'
 import NllLogo from './assets/nll-logo.svg'
 import AuctionHouseLogo from './assets/auction-logo.svg'
-import FlyWheelLogo from './assets/flywheel-logo.png'
+import FlyWheelLogo from './assets/new-flywheel-logo.png'
 import KnowledgeBaseLogo from './assets/phunk-knowledge-logo.jpeg'
 
 import Button from './components/Button/Button';
