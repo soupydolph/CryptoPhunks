@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
     "./index.html",
@@ -6,9 +9,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: ['phunkphont']
+      display: ['phunkphont'],
+      body: ['inter']
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#FF04B4'
+      }
+    },
   },
   plugins: [],
 }

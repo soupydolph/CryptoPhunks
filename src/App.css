@@ -1,13 +1,3 @@
-.phunk-intro {
-  margin: 0 auto;
-
-  & h1 {
-    font-family: var(--phunk-phont);
-    color: var(--phunk-primary);
-    font-size: 3rem;
-  }
-}
-
 .social-block {
   margin-top: 6rem;
   margin-bottom: 3rem;
@@ -25,17 +15,5 @@
 .social-link:hover {
   & svg {
     fill: #FF04B4;
-  }
-}
-
-@media(max-width: 768px) {
-  .phunk-intro {
-    & h1 {
-      font-size: 1.5rem;
-    }
-  }
-
-  h2.large-title {
-    font-size: 32px;
   }
 }

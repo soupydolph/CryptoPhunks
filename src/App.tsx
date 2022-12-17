@@ -63,83 +63,83 @@ function App() {
 
   return (
     <>
-      <section className="section is-medium no-bottom-padding">
-        <div className="phunk-intro has-text-centered">
-          <h1 className="mb-6">CRYPTOPHUNKS</h1>
-          <h2 className="large-title">Be free, be Phunky</h2>
+      <section className="container mx-auto">
+        <div className="phunk-intro m-6 lg:m-24">
+          <h1 className="font-display text-3xl md:text-6xl text-center text-primary my-7 md:my-14">CRYPTOPHUNKS</h1>
+          <h2 className="font-body text-2xl md:text-5xl text-center text-slate-50 my-7 md:my-14">Be free, be Phunky</h2>
         </div>
       </section>
 
-      <section className="section is-medium no-bottom-padding">
-        <div className="columns is-multiline is-mobile">
+      <section className="container mx-auto">
+        <div className="grid grid-cols-4 gap-4">
           {phunks.map((phunk, idx) => {
             return (
-              <div key={`phunk-image-${idx}`} className="column is-one-quarter">
-                <img src={`${phunkIpfsBaseUrl}${phunk}.png`} alt="" />
+              <div key={`phunk-image-${idx}`}>
+                <img className='aspect-square' src={`${phunkIpfsBaseUrl}${phunk}.png`} alt="" />
               </div>
             )
           })}
         </div>
       </section>
 
-      <section className="section is-medium no-bottom-padding">
-        <div className="columns is-centered">
-          <div className="column is-half has-text-centered">
-            <div className='block has-text-white mb-6 is-size-4'>
-              Phunks are free-use, public domain Art, run entirely by decentralized community of artist and builders.
-            </div>
+      <section className="container mx-auto">
+        <div className='w-3/4 mx-auto'>
+          <p className='text-2xl text-slate-50 text-center my-14'>
+            Phunks are free-use, public domain Art, run entirely by decentralized community of artist and builders.
+          </p>
 
-            <div className='block has-text-white mb-6 is-size-4'>
-              There are no Devs, no Leaders, no Roadmaps, just Phunk Pham building cool stuff cause they care about
-              Web3 and decentralization. ✊
-            </div>
+          <p className='text-2xl text-slate-50 text-center my-14'>
+            There are no Devs, no Leaders, no Roadmaps, just Phunk Pham building cool stuff cause they care about
+            Web3 and decentralization. ✊
+          </p>
 
-            <div className='block has-text-white mb-6 is-size-4'>
-              You can buy a Phunk at <Link
-                url="https://notlarvalabs.com/"
-                title="Not Larva Labs"
-              /> or the <Link
-                url="https://phunks.auction/"
-                title="Auction House"
-              /> with 0% fees!
+          <p className='text-2xl text-slate-50 text-center my-14'>
+            You can buy a Phunk at <Link
+              url="https://notlarvalabs.com/"
+              title="Not Larva Labs"
+            /> or the <Link
+              url="https://phunks.auction/"
+              title="Auction House"
+            /> with 0% fees!
 
-              You can learn more about Phunks at the <Link
-                url="https://phunks.gitbook.io/"
-                title="Knowledge Base"
-              />.
-            </div>
-
-            <div className="block">
-              <Button
-                link="https://notlarvalabs.com/"
-                text="buy a phunk"
-                wide={true}
-              />
-            </div>
-            <div className="block social-block">
-              <div className='level is-mobile'>
-                <div className="level-item">
-                  <a href="https://twitter.com/CryptoPhunksV2" target="_blank" rel="noopener noreferrer" className='social-link'>
-                    <Twitter />
-                  </a>
-                </div>
-                <div className="level-item">
-                  <a href="http://discord.gg/phunks" target="_blank" rel="noopener noreferrer" className='social-link'>
-                    <Discord />
-                  </a>
-                </div>
-                <div className="level-item">
-                  <a href="https://eggphunk.medium.com/" target="_blank" rel="noopener noreferrer" className='social-link'>
-                    <Medium />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+            You can learn more about Phunks at the <Link
+              url="https://phunks.gitbook.io/"
+              title="Knowledge Base"
+            />.
+          </p>
         </div>
-      </section>
 
-      <section className="section is-medium">
+        <div className="block">
+          <Button
+            link="https://notlarvalabs.com/"
+            text="buy a phunk"
+            wide={true}
+          />
+        </div>
+
+        <div className="flex flex-row justify-center">
+
+          <div className="basis-20 m-8 md:m-16">
+            <a href="https://twitter.com/CryptoPhunksV2" target="_blank" rel="noopener noreferrer" className='social-link'>
+              <Twitter />
+            </a>
+          </div>
+          <div className="basis-20 m-8 md:m-16">
+            <a href="http://discord.gg/phunks" target="_blank" rel="noopener noreferrer" className='social-link'>
+              <Discord />
+            </a>
+          </div>
+          <div className="basis-20 m-8 md:m-16">
+            <a href="https://eggphunk.medium.com/" target="_blank" rel="noopener noreferrer" className='social-link'>
+              <Medium />
+            </a>
+          </div>
+
+        </div>
+
+      </section >
+
+      <section className="container mx-auto">
         <h2 className="large-title mb-6">Phunky Projects</h2>
 
         <div className="columns side-by-side reverse-cols">
