@@ -135,19 +135,19 @@ function App() {
       </section>
 
       <section className="container mx-auto">
-        <h2 className="font-body text-2xl md:text-6xl text-center text-slate-50 my-7 md:my-14">Phunky Projects</h2>
+        <h2 className="font-body text-4xl md:text-6xl text-center text-slate-50 my-7 md:my-14">Phunky Projects</h2>
 
-        <div className="flex flex-row md:my-32 items-center">
-          <div className="flex flex-row content-center justify-items-center basis-1/2 ">
+        <div className="flex flex-col md:flex-row my-32 items-center">
+          <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
             <img className='mx-auto h-64' src={NllLogo} alt="" />
           </div>
           <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
-            <h3 className="font-body text-1xl md:text-4xl md:my-7">Not Larva Labs</h3>
+            <h3 className="font-body text-2xl md:text-4xl md:my-7">Not Larva Labs</h3>
             <p className='text-xl my-3'>
               NotLarvaLabs (NLL) is a community-built royalty-free Marketplace for buying and
               selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
             </p>
-            <p className='text-xl my-2'>
+            <p className='text-xl mb-10'>
               The idea came to life after two Big Corporations (LarvaLabs and OpenSea) decided to censor CryptoPhunks.
             </p>
             <Button
@@ -157,17 +157,17 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-row-reverse md:my-32 items-center">
-          <div className="flex flex-row content-center justify-items-center basis-1/2 ">
+        <div className="flex flex-col md:flex-row-reverse my-32 items-center">
+          <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
             <img className='mx-auto h-32' src={AuctionHouseLogo} alt="" />
           </div>
           <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
-            <h3 className="font-body text-1xl md:text-4xl md:my-7">CryptoPhunks Auction House</h3>
+            <h3 className="font-body text-2xl md:text-4xl md:my-7">CryptoPhunks Auction House</h3>
             <p className='text-xl my-3'>
               CryptoPhunks Auction House was built by Chopper and Kenobi with the purpose of facilitating perpetual
               auctions for CryptoPhunks held in the Treasury Vault.
             </p>
-            <p className='text-xl my-2'>
+            <p className='text-xl mb-10'>
               All Ethereum collected from settled auctions will remain in the treasury under direction of the community.
             </p>
             <Button
@@ -177,13 +177,13 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-row md:my-32 items-center">
-          <div className="flex flex-row content-center justify-items-center basis-1/2 ">
+        <div className="flex flex-col md:flex-row my-32 items-center">
+          <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
             <img className='mx-auto h-48' src={FlyWheelLogo} alt="" />
           </div>
           <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
-            <h3 className="font-body text-1xl md:text-4xl md:my-7">FlyWheel</h3>
-            <p className='text-xl my-3'>
+            <h3 className="font-body text-2xl md:text-4xl md:my-7">FlyWheel</h3>
+            <p className='text-xl mb-10'>
               The FlyWheel is a DAPP that appraises mid- and top-tier CryptoPhunks and gives holders the option
               to sell them to the Treasury at a small discount to fair market value in a trustless, fair, and automatic way.
             </p>
@@ -194,13 +194,13 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-row-reverse md:my-32 items-center">
-          <div className="flex flex-row content-center justify-items-center basis-1/2 ">
+        <div className="flex flex-col md:flex-row-reverse my-32 items-center">
+          <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
             <img className='mx-auto h-96' src={KnowledgeBaseLogo} alt="" />
           </div>
           <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
-            <h3 className="font-body text-1xl md:text-4xl md:my-7">Phunks Knowledge Base</h3>
-            <p className='text-xl my-2'>
+            <h3 className="font-body text-2xl md:text-4xl md:my-7">Phunks Knowledge Base</h3>
+            <p className='text-xl mb-10'>
               The museum of all things Phunky! Take a deep dive into the history of the phunks.
             </p>
             <Button
