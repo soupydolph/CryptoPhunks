@@ -109,52 +109,49 @@ function App() {
           </p>
         </div>
 
-        <div className="block">
-          <Button
-            link="https://notlarvalabs.com/"
-            text="buy a phunk"
-            wide={true}
-          />
-        </div>
+        <Button
+          link="https://notlarvalabs.com/"
+          text="buy a phunk"
+          autoMargin={true}
+        />
 
         <div className="flex flex-row justify-center">
-
-          <div className="basis-20 m-8 md:m-16">
+          <div className="basis-16 m-8 md:m-16">
             <a href="https://twitter.com/CryptoPhunksV2" target="_blank" rel="noopener noreferrer" className='social-link'>
               <Twitter />
             </a>
           </div>
-          <div className="basis-20 m-8 md:m-16">
+          <div className="basis-16 m-8 md:m-16">
             <a href="http://discord.gg/phunks" target="_blank" rel="noopener noreferrer" className='social-link'>
               <Discord />
             </a>
           </div>
-          <div className="basis-20 m-8 md:m-16">
+          <div className="basis-16 m-8 md:m-16">
             <a href="https://eggphunk.medium.com/" target="_blank" rel="noopener noreferrer" className='social-link'>
               <Medium />
             </a>
           </div>
-
         </div>
-
-      </section >
+      </section>
 
       <section className="container mx-auto">
-        <h2 className="large-title mb-6">Phunky Projects</h2>
+        <h2 className="font-body text-2xl md:text-6xl text-center text-slate-50 my-7 md:my-14">Phunky Projects</h2>
 
-        <div className="columns side-by-side reverse-cols">
-          <div className="column side-by-side-col side-by-side-col--image">
-            <img src={NllLogo} alt="" />
+        <div className="flex flex-row md:my-32 items-center">
+
+          <div className="flex flex-row content-center justify-items-center basis-1/2 ">
+            <img className='mx-auto h-64' src={NllLogo} alt="" />
           </div>
-          <div className="column side-by-side-col">
-            <h3 className='has-text-white is-size-2'>Not Larva Labs</h3>
-            <div className='block has-text-white is-size-4'>
+
+          <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
+            <h3 className="font-body text-1xl md:text-4xl md:my-7">Not Larva Labs</h3>
+            <p className='text-xl'>
               NotLarvaLabs (NLL) is a community-built royalty-free Marketplace for buying and
               selling CryptoPhunks, built on top of it's own custom smart contract with 0% trading fees.
-            </div>
-            <div className='block has-text-white is-size-4'>
+            </p>
+            <p className='text-xl'>
               The idea came to life after two Big Corporations (LarvaLabs and OpenSea) decided to censor CryptoPhunks.
-            </div>
+            </p>
             <Button
               link="https://notlarvalabs.com/"
               text="visit"

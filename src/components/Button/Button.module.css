@@ -1,6 +1,7 @@
 .button {
     display: block;
-    width: 161px;
+    /* margin: 0 auto; */
+    width: 250px;
     height: auto;
     color: rgba(255, 4, 180);
     text-align: center;
@@ -10,7 +11,7 @@
     margin-top: 1.5rem;
     transition: 0.3s;
     padding: 1rem;
-    font-size: 21px;
+    font-size: 23px;
 }
 
 .button:hover {
@@ -18,9 +19,8 @@
   color: white;
 }
 
-.wide-button {
+.button-auto {
   margin: 0 auto;
-  width: 230px;
 }
 
 @media(max-width: 768px) {
