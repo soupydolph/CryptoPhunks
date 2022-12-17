@@ -2,53 +2,10 @@
   margin: 0 auto;
 
   & h1 {
-    font-family: 'phunkphont';
-    color: #FF04B4;
+    font-family: var(--phunk-phont);
+    color: var(--phunk-primary);
     font-size: 3rem;
   }
-}
-
-.no-bottom-padding {
-  padding-bottom: 0 !important;
-}
-
-h2.large-title {
-  font-family: inter;
-  color: white;
-  font-size: 64px;
-  text-align: center;
-}
-
-.side-by-side {
-  margin-top: 6rem !important; 
-  margin-bottom: 12rem !important;
-}
-
-.side-by-side-col {
-  & h3 {
-    font-family: inter;
-    color: white;
-    margin-bottom: 1.5rem;
-  }
-}
-
-.side-by-side-col--image {
-  text-align: center;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-}
-
-.auction-image {
-  height: 6rem
-}
-
-.flywheel-image {
-  max-height: 400px;
-}
-
-.reverse-cols {
-  flex-direction: row-reverse;
 }
 
 .social-block {

@@ -1,21 +1,16 @@
 .button {
-    /* margin: 0 auto; */
     display: block;
     width: 161px;
     height: auto;
     color: rgba(255, 4, 180);
     text-align: center;
-    /* line-height: 50px; */
     border-radius: 5px;
-    font-family: 'phunkphont';
+    font-family: var(--phunk-phont);
     border: 1px solid rgba(255, 4, 180);
-    /* margin-bottom: 3rem; */
     margin-top: 1.5rem;
     transition: 0.3s;
     padding: 1rem;
     font-size: 21px;
-    /* display: block; */
-    /* margin: 0 auto; */
 }
 
 .button:hover {

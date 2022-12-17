@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react'
 
 import './App.css'
 
-import Menu from './components/Menu/Menu';
 import Link from './components/Link/Link';
-import SideBySide from './components/SideBySide/SideBySide';
 
 import Twitter from './components/Twitter';
 import Discord from './components/Discord';
@@ -19,16 +17,16 @@ import KnowledgeBaseLogo from './assets/phunk-knowledge-logo.jpeg'
 
 import Button from './components/Button/Button';
 
-const adjectives = [
-  'innovators',
-  'artists',
-  'developers',
-  'builders',
-  'visionaries',
-  'decentralized',
-  'phree',
-  'phunky'
-]
+// const adjectives = [
+//   'innovators',
+//   'artists',
+//   'developers',
+//   'builders',
+//   'visionaries',
+//   'decentralized',
+//   'phree',
+//   'phunky'
+// ]
 
 const phunkIpfsBaseUrl = 'https://middlemarch.mypinata.cloud/ipfs/QmcvdPd7Jai74e595Mgx2u6D8QZZ1TGSFC2EQQNayQVJL8/';
 const phunksToShow = 8;
@@ -190,7 +188,7 @@ function App() {
             <img className='flywheel-image' src={FlyWheelLogo} alt="" />
           </div>
           <div className="column side-by-side-col">
-            <h3 className='has-text-white is-size-2'>FlyWheel</h3>
+            <h3 className="text-5xl font-bold underline">FlyWheel</h3>
             <div className='block has-text-white is-size-4'>
               The FlyWheel is a DAPP that appraises mid- and top-tier CryptoPhunks and gives holders the option
               to sell them to the Treasury at a small discount to fair market value in a trustless, fair, and automatic way.
@@ -204,7 +202,7 @@ function App() {
 
         <div className="columns side-by-side">
           <div className="column side-by-side-col side-by-side-col--image">
-            <img className='flywheel-image' src={KnowledgeBaseLogo} alt="" />
+            <img className='aspect-square' src={KnowledgeBaseLogo} alt="" />
           </div>
           <div className="column side-by-side-col">
             <h3 className='has-text-white is-size-2'>Phunks Knowledge Base</h3>
