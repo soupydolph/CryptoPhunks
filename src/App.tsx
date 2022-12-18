@@ -16,6 +16,10 @@ import AuctionHouseLogo from './assets/auction-logo.svg'
 import FlyWheelLogo from './assets/new-flywheel-logo.png'
 import KnowledgeBaseLogo from './assets/phunk-knowledge-logo.jpeg'
 
+import v1phunk from './assets/v1phunk.png'
+import v2phunk from './assets/v2phunk.png'
+import v3phunk from './assets/v3phunk.png'
+
 import Button from './components/Button/Button';
 
 // const adjectives = [
@@ -197,7 +201,7 @@ function App() {
 
         <div className="flex flex-col md:flex-row-reverse my-32 items-center">
           <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
-            <img className='mx-auto h-96' src={KnowledgeBaseLogo} alt="" />
+            <img className='mx-auto md:h-96' src={KnowledgeBaseLogo} alt="" />
           </div>
           <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
             <h3 className="font-body text-2xl md:text-4xl md:my-7">Phunks Knowledge Base</h3>
@@ -214,9 +218,31 @@ function App() {
 
       <section className='container mx-auto'>
         <h2 className="font-body text-4xl md:text-6xl text-center text-slate-50 my-7 md:my-14">Phunky Provenance</h2>
-        <Provenance flipped={false} title="V1" caption="The Original" image={`${phunkIpfsBaseUrl}7.png`} />
-        <Provenance flipped={true} title="V2" caption="The Legend" image={`${phunkIpfsBaseUrl}8.png`} />
-        <Provenance flipped={false} title="V3" caption="The Evolution" image={`${phunkIpfsBaseUrl}9.png`} />
+        <Provenance
+          flipped={false}
+          title="V1"
+          caption="The Original"
+          image={v1phunk}
+          lr="https://looksrare.org/collections/0x3ceB6868BfBf99F6b76FE5bB37343C075677C698"
+          os="https://opensea.io/collection/v1-phunks"
+        />
+        <Provenance
+          flipped={true}
+          title="V2"
+          caption="The Legend"
+          image={v2phunk}
+          lr="https://looksrare.org/collections/0xf07468eAd8cf26c752C676E43C814FEe9c8CF402?queryID=643b3f824b2b84a4737c26a0a5720ff5"
+          os="https://opensea.io/collection/crypto-phunks"
+        />
+        <Provenance
+          flipped={false}
+          title="V3"
+          caption="The Evolution"
+          image={v3phunk}
+          lr="https://looksrare.org/collections/0xb7D405BEE01C70A9577316C1B9C2505F146e8842"
+          os="https://opensea.io/collection/v3phunks"
+          isLast={true}
+        />
       </section>
     </>
   )

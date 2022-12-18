@@ -17,3 +17,23 @@
     fill: #FF04B4;
   }
 }
+
+.provenance_card {
+  position: relative;
+}
+
+.provenance_card:after {
+  height: 135px;
+  width: 0px;
+  border: 5px solid grey;
+  display: block;
+  content: "";
+  border-bottom: none;
+  position: absolute;
+  bottom: -139px;
+  border-color: #ced0d4;
+}
+
+.provenance_card--last:after {
+  border: none;
+}

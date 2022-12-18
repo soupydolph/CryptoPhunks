@@ -12,11 +12,6 @@ html {
   background-color: var(--dark-bg-color);
 }
 
-/* body {
-  max-width: 1920px;
-  margin: 0 auto;
-} */
-
 @font-face {
   font-family: phunkphont;
   src: url(./assets/04B_30__.TTF);
