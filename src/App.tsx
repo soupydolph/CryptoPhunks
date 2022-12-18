@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 import Link from './components/Link/Link';
+import Provenance from './components/Provenance/Provenance';
 
 import Twitter from './components/Twitter';
 import Discord from './components/Discord';
@@ -209,6 +210,13 @@ function App() {
             />
           </div>
         </div>
+      </section>
+
+      <section className='container mx-auto'>
+        <h2 className="font-body text-4xl md:text-6xl text-center text-slate-50 my-7 md:my-14">Phunky Provenance</h2>
+        <Provenance flipped={false} title="V1" caption="The Original" image={`${phunkIpfsBaseUrl}7.png`} />
+        <Provenance flipped={true} title="V2" caption="The Legend" image={`${phunkIpfsBaseUrl}8.png`} />
+        <Provenance flipped={false} title="V3" caption="The Evolution" image={`${phunkIpfsBaseUrl}9.png`} />
       </section>
     </>
   )
