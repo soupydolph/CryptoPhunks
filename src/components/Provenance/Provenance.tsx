@@ -1,7 +1,17 @@
 import LooksRare from '../LooksRare';
 import OpenSea from '../OpenSea';
+import Etherscan from '../Etherscan';
 
-const Provenance = (props: { flipped: boolean, title: string, caption: string, image: string, lr?: string, os?: string, isLast?: boolean }) => {
+const Provenance = (props: {
+  flipped: boolean,
+  title: string,
+  caption: string,
+  image: string,
+  lr?: string,
+  os?: string,
+  es?: string,
+  isLast?: boolean
+}) => {
   return (
     <>
       <div className='provenance grid justify-items-stretch max-w-3xl mx-auto mb-32'>
@@ -12,11 +22,14 @@ const Provenance = (props: { flipped: boolean, title: string, caption: string, i
           <h3 className='font-display text-7xl md:text-9xl text-center text-primary'>{props.title}</h3>
           <p className='text-primary text-2xl'>{props.caption}</p>
           <div className='links flex flex-row'>
-            <a className='w-10 h-10 m-4' href={props.lr} target="_blank" rel="noopener noreferrer">
+            <a className='w-10 h-10 m-6' href={props.lr} target="_blank" rel="noopener noreferrer">
               <LooksRare />
             </a>
-            <a className='w-10 h-10 m-4' href={props.os} target="_blank" rel="noopener noreferrer">
+            <a className='w-10 h-10 m-6' href={props.os} target="_blank" rel="noopener noreferrer">
               <OpenSea />
+            </a>
+            <a className='w-10 h-10 m-6' href={props.es} target="_blank" rel="noopener noreferrer">
+              <Etherscan />
             </a>
           </div>
         </div>
