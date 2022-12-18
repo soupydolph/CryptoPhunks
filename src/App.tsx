@@ -54,6 +54,8 @@ function App() {
   //   return () => clearInterval(interval);
   // }, []);
 
+  const year = new Date().getFullYear()
+
   const getRandomInt = (max: number) => {
     return Math.floor(Math.random() * max);
   }
@@ -243,6 +245,16 @@ function App() {
           os="https://opensea.io/collection/v3phunks"
           isLast={true}
         />
+      </section>
+      <section className='container mx-auto'>
+        <p className="text-2xl text-slate-50 text-center">Built by <Link
+          url="https://twitter.com/soupydolph"
+          title="soupy"
+        />
+        </p>
+        <p className="text-2xl text-slate-50 text-center">
+          © {year}
+        </p>
       </section>
     </>
   )
