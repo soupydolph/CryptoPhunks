@@ -1,5 +1,5 @@
 import LooksRare from '../LooksRare';
-import OpenSea from '../Opensea';
+import OpenSea from '../OpenSea';
 
 const Provenance = (props: { flipped: boolean, title: string, caption: string, image: string, lr?: string, os?: string, isLast?: boolean }) => {
   return (
