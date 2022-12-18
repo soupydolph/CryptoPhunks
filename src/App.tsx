@@ -18,7 +18,7 @@ import KnowledgeBaseLogo from './assets/phunk-knowledge-logo.jpeg'
 
 import v1phunk from './assets/v1phunk.png'
 import v2phunk from './assets/v2phunk.png'
-import v3phunk from './assets/v3phunk.png'
+import v3phunk from './assets/v3-phunk.png'
 
 import Button from './components/Button/Button';
 
