@@ -144,7 +144,7 @@ function App() {
       <section className="container mx-auto">
         <h2 className="font-body text-4xl md:text-6xl text-center text-slate-50 my-7 md:my-14">Phunky Projects</h2>
 
-        <div className="flex flex-col md:flex-row my-32 items-center">
+        <div className="flex flex-col md:flex-row m-5 my-32 items-center">
           <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
             <img className='mx-auto h-64' src={NllLogo} alt="" />
           </div>
@@ -164,7 +164,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row-reverse my-32 items-center">
+        <div className="flex flex-col md:flex-row-reverse m-5 my-32 items-center">
           <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
             <img className='mx-auto h-32' src={AuctionHouseLogo} alt="" />
           </div>
@@ -184,7 +184,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row my-32 items-center">
+        <div className="flex flex-col md:flex-row m-5 my-32 items-center">
           <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
             <img className='mx-auto h-48' src={FlyWheelLogo} alt="" />
           </div>
@@ -201,7 +201,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row-reverse my-32 items-center">
+        <div className="flex flex-col md:flex-row-reverse m-5 my-32 items-center">
           <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
             <img className='mx-auto md:h-96' src={KnowledgeBaseLogo} alt="" />
           </div>
