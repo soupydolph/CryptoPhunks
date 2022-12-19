@@ -225,7 +225,7 @@ function App() {
           title="V1"
           caption="The Original"
           image={v1phunk}
-          lr="https://looksrare.org/collections/0x3ceB6868BfBf99F6b76FE5bB37343C075677C698"
+          lr="https://looksrare.org/collections/0x235d49774139c218034c0571Ba8f717773eDD923"
           os="https://opensea.io/collection/official-v1-phunks"
           es="https://etherscan.io/address/0xA82F3a61F002F83Eba7D184c50bB2a8B359cA1cE"
         />
