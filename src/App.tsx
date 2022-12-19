@@ -73,7 +73,7 @@ function App() {
       <section className="container mx-auto">
         <div className="phunk-intro m-6 lg:m-24">
           <h1 className="font-display text-3xl md:text-6xl text-center text-primary my-7 md:my-24">CRYPTOPHUNKS</h1>
-          <h2 className="font-body text-2xl md:text-5xl text-center text-slate-50 my-7 md:my-14">Be free, be Phunky</h2>
+          <h2 className="font-body text-2xl md:text-5xl text-center text-slate-50 my-7 md:my-14">Be Phree, be Phunky</h2>
         </div>
       </section>
 
