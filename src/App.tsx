@@ -9,8 +9,6 @@ import Twitter from './components/Twitter';
 import Discord from './components/Discord';
 import Medium from './components/Medium';
 
-// import phunk from './assets/phunk0939.svg'
-// import Video from './assets/phunks-intro-vid.mp4'
 import NllLogo from './assets/nll-logo.svg'
 import AuctionHouseLogo from './assets/auction-logo.svg'
 import FlyWheelLogo from './assets/new-flywheel-logo.png'
@@ -22,37 +20,11 @@ import v3phunk from './assets/v3-phunk.png'
 
 import Button from './components/Button/Button';
 
-// const adjectives = [
-//   'innovators',
-//   'artists',
-//   'developers',
-//   'builders',
-//   'visionaries',
-//   'decentralized',
-//   'phree',
-//   'phunky'
-// ]
-
 const phunkIpfsBaseUrl = 'https://middlemarch.mypinata.cloud/ipfs/QmcvdPd7Jai74e595Mgx2u6D8QZZ1TGSFC2EQQNayQVJL8/';
 const phunksToShow = 8;
 
 function App() {
   const [phunks, setPhunks] = useState<number[]>([])
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setAdjIndex(prev => {
-  //       const next = (prev + 1)
-
-  //       if (next === adjectives.length) {
-  //         return 0;
-  //       } else {
-  //         return (prev + 1)
-  //       }
-  //     })
-  //   }, 3000);
-  //   return () => clearInterval(interval);
-  // }, []);
 
   const year = new Date().getFullYear()
 
