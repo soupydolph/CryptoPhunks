@@ -64,7 +64,7 @@ function App() {
       <section className="container mx-auto font-light my-7 md:my-24">
         <div className='w-3/4 mx-auto'>
           <p className='text-2xl text-slate-50 text-center my-14'>
-            Phunks are free-use, public domain Art, run entirely by decentralized community of artist and builders.
+            Phunks are free-use, public domain Art, run by a decentralized community of artist and builders.
           </p>
 
           <p className='text-2xl text-slate-50 text-center my-14'>
