@@ -1,6 +1,6 @@
-import LooksRare from '../LooksRare';
-import OpenSea from '../OpenSea';
-import Etherscan from '../Etherscan';
+import LooksRare from '../icons/LooksRare';
+import OpenSea from '../icons/OpenSea';
+import Etherscan from '../icons/Etherscan';
 
 const Provenance = (props: {
   flipped: boolean,
