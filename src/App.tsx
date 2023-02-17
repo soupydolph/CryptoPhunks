@@ -19,7 +19,7 @@ import v2phunk from "./assets/v2phunk.png";
 import v3phunk from "./assets/v3-phunk.png";
 
 import Button from "./components/Button/Button";
-import PhunkBoard from "./components/PhunkBoard/PhunkBoard";
+import PhunkyBoard from "./components/PhunkBoard/PhunkyBoard";
 
 const phunkIpfsBaseUrl =
   "https://middlemarch.mypinata.cloud/ipfs/QmcvdPd7Jai74e595Mgx2u6D8QZZ1TGSFC2EQQNayQVJL8/";
@@ -55,7 +55,7 @@ function App() {
         </div>
       </section>
 
-      <PhunkBoard />
+      <PhunkyBoard phunksToShow={8} />
 
       <section className="container mx-auto font-light my-7 md:my-24">
         <div className="w-3/4 mx-auto">

@@ -5,9 +5,8 @@ import { useQuery } from "@apollo/client";
 
 const phunkIpfsBaseUrl =
   "https://middlemarch.mypinata.cloud/ipfs/QmcvdPd7Jai74e595Mgx2u6D8QZZ1TGSFC2EQQNayQVJL8/";
-const phunksToShow = 8;
 
-// TODO: get list of ids sorted by recently sold
+// Graph Queries
 const GET_PHUNKS = gql`
   {
     phunks(first: 1000) {
@@ -18,26 +17,23 @@ const GET_PHUNKS = gql`
   }
 `;
 
-const PhunkBoard = () => {
+const PhunkyBoard = (props: { phunksToShow: number }) => {
   const [phunks, setPhunks] = useState<number[]>([]);
   const { loading, error, data } = useQuery(GET_PHUNKS);
 
-  // Phunks data received from the graph
+  const filterByActiveListing = (accumulator: number[], phunk: any) => {
+    if (phunk["activeListing"] && accumulator.length < props.phunksToShow) {
+      return [...accumulator, phunk["activeListing"]["id"]];
+    } else return accumulator;
+  };
+
   useEffect(() => {
     if (data && !loading) {
-      setPhunks(
-        data.phunks.reduce((accumulator: any, phunk: any, index: number) => {
-          if (phunk["activeListing"] && accumulator.length < phunksToShow) {
-            console.log(`accumulator: ${accumulator}, phunk`);
-            console.log(phunk);
-            return [...accumulator, phunk["activeListing"]["id"]];
-          } else return accumulator;
-        }, [])
-      );
+      setPhunks(data.phunks.reduce(filterByActiveListing, []));
     }
   }, [data]);
 
-  const renderPhunkBoard = () => {
+  const renderPhunkyBoard = () => {
     return (
       <div className="grid grid-cols-4 gap-4">
         {phunks.map((phunk, idx) => {
@@ -46,7 +42,7 @@ const PhunkBoard = () => {
               <img
                 className="aspect-square"
                 src={`${phunkIpfsBaseUrl}${phunk}.png`}
-                alt=""
+                alt={`Image for Phunk token id: ${phunk}`}
               />
             </div>
           );
@@ -57,11 +53,9 @@ const PhunkBoard = () => {
 
   return (
     <section className="container mx-auto my-7 md:my-24">
-      {/* <div className="grid grid-cols-4 gap-4"> */}
-      {data ? renderPhunkBoard() : ""}
-      {/* </div> */}
+      {data ? renderPhunkyBoard() : ""}
     </section>
   );
 };
 
-export default PhunkBoard;
+export default PhunkyBoard;
