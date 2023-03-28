@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { useQuery } from "react-query";
+
+import { requestRecentSales } from "../api";
 
 const config = {
   phunksToShow: 8,
@@ -20,7 +23,19 @@ const PhunkyBoard = () => {
     setPhunks(phunkList);
   };
 
-  const getRecentlySoldPhunks = () => {};
+  const recentylSoldQuery = useQuery(["recentlySold"], async () => {
+    return requestRecentSales();
+  });
+
+  const getRecentlySoldPhunks = () => {
+    const recentlySoldPhunks = recentylSoldQuery.data.data.sales.map(
+      (sale: Object) => {
+        return sale.token.tokenId;
+      }
+    );
+
+    setPhunks(recentlySoldPhunks);
+  };
 
   useEffect(() => {
     getRandomPhunks();
