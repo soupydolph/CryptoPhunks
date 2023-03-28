@@ -1,47 +1,17 @@
-import { useState, useEffect } from "react";
-
 import "./App.css";
 
 import Link from "./components/Link/Link";
-import Provenance from "./components/Provenance/Provenance";
+import Provenance from "./components/Provenance";
 
-// TODO: move these out from React components and just used as regular images
-import Twitter from "./components/Twitter";
-import Discord from "./components/Discord";
-import Medium from "./components/Medium";
-
-import NllLogo from "./assets/nll-logo.svg";
-import AuctionHouseLogo from "./assets/auction-logo.svg";
-import FlyWheelLogo from "./assets/new-flywheel-logo.png";
-import KnowledgeBaseLogo from "./assets/phunk-knowledge-logo.jpeg";
-
-import v1phunk from "./assets/v1phunk.png";
-import v2phunk from "./assets/v2phunk.png";
-import v3phunk from "./assets/v3-phunk.png";
+import Twitter from "./assets/logos/Twitter";
+import Discord from "./assets/logos/Discord";
+import Medium from "./assets/logos/Medium";
 
 import Button from "./components/Button/Button";
 import PhunkyBoard from "./components/PhunkyBoard";
 
-const phunkIpfsBaseUrl =
-  "https://middlemarch.mypinata.cloud/ipfs/QmcvdPd7Jai74e595Mgx2u6D8QZZ1TGSFC2EQQNayQVJL8/";
-const phunksToShow = 8;
-
 function App() {
-  const [phunks, setPhunks] = useState<number[]>([]);
-
   const year = new Date().getFullYear();
-
-  const getRandomInt = (max: number) => {
-    return Math.floor(Math.random() * max);
-  };
-
-  useEffect(() => {
-    const phunkList = [];
-    for (let i = 0; i < phunksToShow; i++) {
-      phunkList.push(getRandomInt(10000));
-    }
-    setPhunks(phunkList);
-  }, []);
 
   return (
     <>
@@ -126,7 +96,7 @@ function App() {
 
         <div className="flex flex-col md:flex-row m-5 my-32 items-center">
           <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
-            <img className="mx-auto h-64" src={NllLogo} alt="" />
+            <img className="mx-auto h-64" src="/nll-logo.svg" alt="" />
           </div>
           <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
             <h3 className="font-body text-2xl md:text-4xl md:my-7">
@@ -147,7 +117,7 @@ function App() {
 
         <div className="flex flex-col md:flex-row-reverse m-5 my-32 items-center">
           <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
-            <img className="mx-auto h-32" src={AuctionHouseLogo} alt="" />
+            <img className="mx-auto h-32" src="/auction-logo.svg" alt="" />
           </div>
           <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
             <h3 className="font-body text-2xl md:text-4xl md:my-7">
@@ -168,7 +138,7 @@ function App() {
 
         <div className="flex flex-col md:flex-row m-5 my-32 items-center">
           <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
-            <img className="mx-auto h-48" src={FlyWheelLogo} alt="" />
+            <img className="mx-auto h-48" src="/flywheel-logo.png" alt="" />
           </div>
           <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
             <h3 className="font-body text-2xl md:text-4xl md:my-7">FlyWheel</h3>
@@ -184,7 +154,11 @@ function App() {
 
         <div className="flex flex-col md:flex-row-reverse m-5 my-32 items-center">
           <div className="flex flex-row content-center justify-items-center basis-1/2 my-14">
-            <img className="mx-auto md:h-96" src={KnowledgeBaseLogo} alt="" />
+            <img
+              className="mx-auto md:h-96"
+              src="/phunk-knowledge-logo.jpeg"
+              alt=""
+            />
           </div>
           <div className="basis-1/2 flex flex-col justify-start content-center text-slate-50">
             <h3 className="font-body text-2xl md:text-4xl md:my-7">
@@ -207,7 +181,7 @@ function App() {
           flipped={false}
           title="V1"
           caption="The Original"
-          image={v1phunk}
+          image="/v1Phunk.png"
           lr="https://looksrare.org/collections/0x235d49774139c218034c0571Ba8f717773eDD923"
           os="https://opensea.io/collection/official-v1-phunks"
           es="https://etherscan.io/address/0xA82F3a61F002F83Eba7D184c50bB2a8B359cA1cE"
@@ -216,7 +190,7 @@ function App() {
           flipped={true}
           title="V2"
           caption="The Legend"
-          image={v2phunk}
+          image="/v2Phunk.png"
           lr="https://looksrare.org/collections/0xf07468eAd8cf26c752C676E43C814FEe9c8CF402?queryID=643b3f824b2b84a4737c26a0a5720ff5"
           os="https://opensea.io/collection/crypto-phunks"
           es="https://etherscan.io/address/0xf07468eAd8cf26c752C676E43C814FEe9c8CF402"
@@ -225,7 +199,7 @@ function App() {
           flipped={false}
           title="V3"
           caption="The Evolution"
-          image={v3phunk}
+          image="/v3Phunk.png"
           lr="https://looksrare.org/collections/0xb7D405BEE01C70A9577316C1B9C2505F146e8842"
           os="https://opensea.io/collection/v3phunks"
           es="https://etherscan.io/address/0xb7d405bee01c70a9577316c1b9c2505f146e8842"
