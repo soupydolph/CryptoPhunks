@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useQuery } from "react-query";
 
-import { requestRecentSales } from "../api";
+import { requestRecentSales, requestFloorPhunks } from "../api";
 
 const config = {
   phunksToShow: 8,
@@ -10,6 +10,15 @@ const config = {
 
 const PhunkyBoard = () => {
   const [phunks, setPhunks] = useState<number[]>([]);
+  const [floor, setFloor] = useState(0);
+
+  const recentylSoldQuery = useQuery(["recentlySold"], async () => {
+    return requestRecentSales();
+  });
+
+  const floorPhunksQuery = useQuery(["floorPhunks"], async () => {
+    return requestFloorPhunks();
+  });
 
   const getRandomInt = (max: number) => {
     return Math.floor(Math.random() * max);
@@ -23,10 +32,6 @@ const PhunkyBoard = () => {
     setPhunks(phunkList);
   };
 
-  const recentylSoldQuery = useQuery(["recentlySold"], async () => {
-    return requestRecentSales();
-  });
-
   const getRecentlySoldPhunks = () => {
     const recentlySoldPhunks = recentylSoldQuery.data.data.sales.map(
       (sale: Object) => {
@@ -37,9 +42,33 @@ const PhunkyBoard = () => {
     setPhunks(recentlySoldPhunks);
   };
 
+  const getAscendingPhunks = () => {
+    const ascendingPhunks = Array(config.phunksToShow)
+      .fill()
+      .map((x, i) => i);
+    setPhunks(ascendingPhunks);
+  };
+
+  const getFloorPhunks = () => {
+    const floorPhunks = floorPhunksQuery.data.data.tokens.map(
+      (token: Object) => token.token.tokenId
+    );
+    setPhunks(floorPhunks);
+  };
+
   useEffect(() => {
     getRandomPhunks();
   }, []);
+
+  useEffect(() => {
+    if (floorPhunksQuery.isSuccess) {
+      const lowestFloor =
+        floorPhunksQuery.data.data.tokens[0].market.floorAsk.price.amount
+          .decimal;
+      setFloor(lowestFloor);
+      console.log(floor);
+    }
+  }, [floorPhunksQuery.isSuccess]);
 
   return (
     <>
@@ -56,17 +85,28 @@ const PhunkyBoard = () => {
         >
           Recently Sold
         </button>
-        <button className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white font-bold w-40 h-16">
+        <button
+          onClick={() => getAscendingPhunks()}
+          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white font-bold w-40 h-16"
+        >
           Id
         </button>
-        <button className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white font-bold w-40 h-16">
-          Floor
+        <button
+          onClick={() => getFloorPhunks()}
+          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white font-bold w-40 h-16"
+        >
+          Floor ({floor})
         </button>
       </div>
 
       <section className="container mx-auto my-7 md:my-24">
         <div className="grid grid-cols-4 gap-4">
           {phunks.map((phunk, idx) => {
+            if (phunk < 10) {
+              phunk = `00${phunk}`;
+            } else if (phunk < 100) {
+              phunk = `0${phunk}`;
+            }
             return (
               <div key={`phunk-image-${idx}`}>
                 <img
