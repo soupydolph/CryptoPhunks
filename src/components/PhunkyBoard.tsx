@@ -74,28 +74,28 @@ const PhunkyBoard = () => {
 
   return (
     <>
-      <div className="flex place-content-between w-3/5 m-auto">
+      <div className="flex place-content-between w- sm:w-4/5 m-auto">
         <button
           onClick={() => getRandomPhunks()}
-          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white font-bold w-40 h-16"
+          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white text-xs md:text-base font-medium md:font-bold w-24 md:w-40 h-12 md:h-16"
         >
           Random
         </button>
         <button
           onClick={() => getRecentlySoldPhunks()}
-          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white font-bold w-40 h-16"
+          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white text-xs md:text-base font-medium md:font-bold w-24 md:w-40 h-12 md:h-16"
         >
           Recently Sold
         </button>
         <button
           onClick={() => getAscendingPhunks()}
-          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white font-bold w-40 h-16"
+          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white text-xs md:text-base font-medium md:font-bold w-24 md:w-40 h-12 md:h-16"
         >
           Id
         </button>
         <button
           onClick={() => getFloorPhunks()}
-          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white font-bold w-40 h-16"
+          className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white text-xs md:text-base font-medium md:font-bold w-24 md:w-40 h-12 md:h-16"
         >
           Floor ({floor})
         </button>
