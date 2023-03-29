@@ -33,8 +33,9 @@ const PhunkyBoard = () => {
   };
 
   const getRecentlySoldPhunks = () => {
-    const recentlySoldPhunks = recentylSoldQuery.data.data.sales.map(
+    const recentlySoldPhunks = recentylSoldQuery?.data?.data.sales.map(
       (sale: Object) => {
+        // @ts-ignore
         return sale.token.tokenId;
       }
     );
@@ -44,13 +45,14 @@ const PhunkyBoard = () => {
 
   const getAscendingPhunks = () => {
     const ascendingPhunks = Array(config.phunksToShow)
-      .fill()
+      .fill(0)
       .map((x, i) => i);
     setPhunks(ascendingPhunks);
   };
 
   const getFloorPhunks = () => {
-    const floorPhunks = floorPhunksQuery.data.data.tokens.map(
+    const floorPhunks = floorPhunksQuery?.data?.data.tokens.map(
+      // @ts-ignore
       (token: Object) => token.token.tokenId
     );
     setPhunks(floorPhunks);
@@ -103,8 +105,10 @@ const PhunkyBoard = () => {
         <div className="grid grid-cols-4 gap-4">
           {phunks.map((phunk, idx) => {
             if (phunk < 10) {
-              phunk = `00${phunk}`;
+              // @ts-ignore
+              phunk = `00${phunk}` as const;
             } else if (phunk < 100) {
+              // @ts-ignore
               phunk = `0${phunk}`;
             }
             return (
