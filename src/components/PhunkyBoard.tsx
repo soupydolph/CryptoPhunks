@@ -74,7 +74,7 @@ const PhunkyBoard = () => {
 
   return (
     <>
-      <div className="flex place-content-between w- sm:w-4/5 m-auto">
+      <div className="flex place-content-between w-4/5 m-auto">
         <button
           onClick={() => getRandomPhunks()}
           className="rounded-full border-primary border-2 hover:bg-primary text-primary hover:text-white text-xs md:text-base font-medium md:font-bold w-16 sm:w-24 md:w-40 h-12 md:h-16"
