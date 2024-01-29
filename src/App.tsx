@@ -70,7 +70,7 @@ function App() {
               <Twitter />
             </a>
           </div>
-          <div className="basis-10 m-8 md:m-16">
+          {/* <div className="basis-10 m-8 md:m-16">
             <a
               href="http://discord.gg/phunks"
               target="_blank"
@@ -79,7 +79,7 @@ function App() {
             >
               <Discord />
             </a>
-          </div>
+          </div> */}
           <div className="basis-10 m-8 md:m-16">
             <a
               href="https://eggphunk.medium.com/"
