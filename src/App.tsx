@@ -185,7 +185,7 @@ function App() {
           flipped={false}
           title="V1"
           caption="The Original"
-          image={v1phunk}
+          image="/v1phunk.png"
           lr="https://looksrare.org/collections/0x235d49774139c218034c0571Ba8f717773eDD923"
           os="https://opensea.io/collection/official-v1-phunks"
           es="https://etherscan.io/address/0xA82F3a61F002F83Eba7D184c50bB2a8B359cA1cE"
@@ -194,7 +194,7 @@ function App() {
           flipped={true}
           title="V2"
           caption="The Legend"
-          image={v2phunk}
+          image="/v2phunk.png"
           lr="https://looksrare.org/collections/0xf07468eAd8cf26c752C676E43C814FEe9c8CF402?queryID=643b3f824b2b84a4737c26a0a5720ff5"
           os="https://opensea.io/collection/crypto-phunks"
           es="https://etherscan.io/address/0xf07468eAd8cf26c752C676E43C814FEe9c8CF402"
@@ -203,7 +203,7 @@ function App() {
           flipped={false}
           title="V3"
           caption="The Evolution"
-          image={v3phunk}
+          image="/v3phunk.png"
           lr="https://looksrare.org/collections/0xb7D405BEE01C70A9577316C1B9C2505F146e8842"
           os="https://opensea.io/collection/v3phunks"
           es="https://etherscan.io/address/0xb7d405bee01c70a9577316c1b9c2505f146e8842"
